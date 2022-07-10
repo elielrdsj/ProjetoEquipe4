@@ -2,7 +2,7 @@
 
 namespace LetsMarket.Interfaces
 {
-    public interface IExitAndCancelOptionsCreation
+    public interface IExitAndCancelOptionsCreator
     {
         Product[] CreateExitAndCancelOptions(List<Product> products);
     }

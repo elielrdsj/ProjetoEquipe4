@@ -12,7 +12,7 @@ namespace LetsMarket.Logic
             IListingItems _listItems = new ListingItems();
             IItemsForSaleDisplayer _itemsDisplayer = new ItemsForSaleDisplayer(_listItems);
             ITotalPurchase _totalPurchase = new TotalPurchase();
-            IExitAndCancelOptionsCreation _exitAndCancelOptionsCreation = new ExitAndCancelOptionsCreation();
+            IExitAndCancelOptionsCreator _exitAndCancelOptionsCreator = new ExitAndCancelOptionsCreator();
             IExitAndCancelOptionsRemover _exitAndCancelOptionsRemover = new ExitAndCancelOptionsRemover();
             IItemCanceller _itemCanceller = new ItemCanceller();
             IItemSelector _itemSelector = new ItemSelector(_itemCanceller);
@@ -21,7 +21,7 @@ namespace LetsMarket.Logic
             var itemsForSale = new List<ItemsForSale>();
 
             var products = Database.Products.ToList();
-            var exitAndCancelOptions = _exitAndCancelOptionsCreation.CreateExitAndCancelOptions(products);
+            var exitAndCancelOptions = _exitAndCancelOptionsCreator.CreateExitAndCancelOptions(products);
 
             Product product = null;
             do

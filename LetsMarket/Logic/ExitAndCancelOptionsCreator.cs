@@ -2,7 +2,7 @@
 
 namespace LetsMarket.Logic
 {
-    public class ExitAndCancelOptionsCreation : IExitAndCancelOptionsCreation
+    public class ExitAndCancelOptionsCreator : IExitAndCancelOptionsCreator
     {
         public Product[] CreateExitAndCancelOptions(List<Product> products)
         {
