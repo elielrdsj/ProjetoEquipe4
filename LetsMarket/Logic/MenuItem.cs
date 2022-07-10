@@ -1,4 +1,4 @@
-﻿namespace LetsMarket
+﻿namespace LetsMarket.Logic
 {
 
     public class MenuItem
