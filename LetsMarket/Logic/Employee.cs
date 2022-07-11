@@ -1,13 +1,14 @@
 ﻿using BetterConsoleTables;
 using LetsMarket.Db;
 using LetsMarket.Enums;
+using LetsMarket.Interfaces;
 using LetsMarket.View;
 using Sharprompt;
 using System.ComponentModel.DataAnnotations;
 
 namespace LetsMarket.Logic
 {
-    public class Employee
+    public class Employee : IEntity
     {
         [Display(Name = "Nome")]
         [Required]
@@ -25,11 +26,11 @@ namespace LetsMarket.Logic
         [Display(Name = "Categoria")]
         public EmployeeCategory Category { get; set; }
 
-        public static void RegisterEmployee()
+        public void Create()
         {
             var employee = Prompt.Bind<Employee>();
-            var save = Prompt.Confirm("Deseja Salvar?");
-            if (!save)
+
+            if (!StandardMessages.ShowMessageAndConfirmCreate())
                 return;
 
             Database.Employees.Add(employee);
@@ -44,22 +45,16 @@ namespace LetsMarket.Logic
         //    return suggestion.ToLower();
         //}
 
-        public static void ListEmployees()
+        public void List()
         {
-            Console.WriteLine("Listando Funcionários");
-            Console.WriteLine();
+            StandardMessages.ListingMessage();
 
             var table = new Table(TableConfiguration.UnicodeAlt());
             table.From(Database.Employees);
             Console.WriteLine(table.ToString());
         }
 
-        public override string ToString()
-        {
-            return Name;
-        }
-
-        public static void EditEmployee()
+        public void Update()
         {
             var employee = Prompt.Select("Selecione o Funcionário para Editar", Database.Employees, defaultValue: Database.Employees[0]);
 
@@ -68,23 +63,27 @@ namespace LetsMarket.Logic
             Database.Save(DatabaseOption.Employees);
         }
 
-        public static void RemoveEmployee()
+        public void Delete()
         {
             if (Database.Employees.Count == 1)
             {
-                ConsoleInput.WriteError("Não é possível remover todos os usuários.");
-                Console.ReadKey();
+                StandardMessages.DeleteErrorMessage();
                 return;
             }
 
             var employee = Prompt.Select("Selecione o Funcionário para Remover", Database.Employees);
-            var confirm = Prompt.Confirm("Tem Certeza?", false);
 
-            if (!confirm)
+            if (!StandardMessages.ShowMessageAndConfirmDelete())
                 return;
 
             Database.Employees.Remove(employee);
             Database.Save(DatabaseOption.Employees);
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
     }
 }

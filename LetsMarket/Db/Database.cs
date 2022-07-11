@@ -10,7 +10,7 @@ namespace LetsMarket.Db
 
     public class Database
     {
-        private static readonly string _rootDirectory = @"C:\Users\laisf\source\repos\ProjetoFinalPOOII\ProjetoEquipe4\LetsMarket\bin\Debug\net6.0";
+        private static readonly string _rootDirectory = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string _employeesDb = Path.Combine(_rootDirectory, "employees.xml");
         private static readonly string _productsDb = Path.Combine(_rootDirectory, "products.xml");
         private static readonly string _clientsDb = Path.Combine(_rootDirectory, "clients.xml");

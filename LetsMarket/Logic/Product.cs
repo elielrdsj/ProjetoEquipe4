@@ -2,10 +2,11 @@
 using LetsMarket.Db;
 using Sharprompt;
 using System.ComponentModel.DataAnnotations;
+using LetsMarket.Interfaces;
 
 namespace LetsMarket.Logic
 {
-    public class Product
+    public class Product : IEntity
     {
         [Display(Name = "Código")]
         [Required(ErrorMessage = "O código é obrigatório")]
@@ -19,33 +20,27 @@ namespace LetsMarket.Logic
         [Required(ErrorMessage = "O preço é obrigatório")]
         public decimal Price { get; set; }
 
-        public static void RegisterProduct()
+        public void Create()
         {
             var product = Prompt.Bind<Product>();
 
-            if (!Prompt.Confirm("Deseja Salvar?"))
+            if (!StandardMessages.ShowMessageAndConfirmCreate())
                 return;
 
             Database.Products.Add(product);
             Database.Save(DatabaseOption.Products);
         }
 
-        public static void ListProducts()
+        public void List()
         {
-            Console.WriteLine("Listando Produtos");
-            Console.WriteLine();
+            StandardMessages.ListingMessage();
 
             var table = new Table(TableConfiguration.UnicodeAlt());
             table.From(Database.Products);
             Console.WriteLine(table.ToString());
         }
 
-        public override string ToString()
-        {
-            return Description;
-        }
-
-        public static void EditProduct()
+        public void Update()
         {
             var produto = Prompt.Select("Selecione o Produto para Editar", Database.Products, defaultValue: Database.Products[0]);
 
@@ -54,16 +49,21 @@ namespace LetsMarket.Logic
             Database.Save(DatabaseOption.Products);
         }
 
-        public static void RemoveProduct()
+        public void Delete()
         {
             var product = Prompt.Select("Selecione o Produto para Remover", Database.Products);
-            var confirm = Prompt.Confirm("Tem Certeza?", false);
 
-            if (!confirm)
+            if (!StandardMessages.ShowMessageAndConfirmDelete())
                 return;
 
             Database.Products.Remove(product);
             Database.Save(DatabaseOption.Products);
         }
+
+        public override string ToString()
+        {
+            return Description;
+        }
+
     }
 }
