@@ -6,8 +6,10 @@ using LetsMarket.Interfaces;
 
 namespace LetsMarket.Logic
 {
-    public class Product : StandardMessages, IEntity
+    public class Product : IEntity
     {
+        IStandardMessages _standardMessage = new StandardMessages();
+
         [Display(Name = "Código")]
         [Required(ErrorMessage = "O código é obrigatório")]
         public string Code { get; set; }
@@ -24,7 +26,7 @@ namespace LetsMarket.Logic
         {
             var product = Prompt.Bind<Product>();
 
-            if (!ShowMessageAndConfirmCreate())
+            if (!_standardMessage.ShowMessageAndConfirmCreate())
                 return;
 
             Database.Products.Add(product);
@@ -33,7 +35,7 @@ namespace LetsMarket.Logic
 
         public void List()
         {
-            ListingMessage();
+            _standardMessage.ListingMessage();
 
             var table = new Table(TableConfiguration.UnicodeAlt());
             table.From(Database.Products);
@@ -53,7 +55,7 @@ namespace LetsMarket.Logic
         {
             var product = Prompt.Select("Selecione o Produto para Remover", Database.Products);
 
-            if (!ShowMessageAndConfirmDelete())
+            if (!_standardMessage.ShowMessageAndConfirmDelete())
                 return;
 
             Database.Products.Remove(product);

@@ -8,8 +8,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LetsMarket.Logic
 {
-    public class Employee : StandardMessages, IEntity
+    public class Employee : IEntity
     {
+        IStandardMessages _standardMessage = new StandardMessages();
+
         [Display(Name = "Nome")]
         [Required]
         public string Name { get; set; }
@@ -30,7 +32,7 @@ namespace LetsMarket.Logic
         {
             var employee = Prompt.Bind<Employee>();
 
-            if (!ShowMessageAndConfirmCreate())
+            if (!_standardMessage.ShowMessageAndConfirmCreate())
                 return;
 
             Database.Employees.Add(employee);
@@ -47,7 +49,7 @@ namespace LetsMarket.Logic
 
         public void List()
         {
-            ListingMessage();
+            _standardMessage.ListingMessage();
 
             var table = new Table(TableConfiguration.UnicodeAlt());
             table.From(Database.Employees);
@@ -67,13 +69,13 @@ namespace LetsMarket.Logic
         {
             if (Database.Employees.Count == 1)
             {
-                DeleteErrorMessage();
+                _standardMessage.DeleteErrorMessage();
                 return;
             }
 
             var employee = Prompt.Select("Selecione o Funcionário para Remover", Database.Employees);
 
-            if (!ShowMessageAndConfirmDelete())
+            if (!_standardMessage.ShowMessageAndConfirmDelete())
                 return;
 
             Database.Employees.Remove(employee);

@@ -1,24 +1,25 @@
-﻿using LetsMarket.View;
+﻿using LetsMarket.Interfaces;
+using LetsMarket.View;
 using Sharprompt;
 
 namespace LetsMarket
 {
-    public abstract class StandardMessages
+    public class StandardMessages : IStandardMessages
     {
-        public static bool ShowMessageAndConfirmCreate()
+        public bool ShowMessageAndConfirmCreate()
         {
             return Prompt.Confirm("Deseja Salvar?");
         }
-        public static bool ShowMessageAndConfirmDelete()
+        public bool ShowMessageAndConfirmDelete()
         {
             return Prompt.Confirm("Tem Certeza?", false);
         }
-        public static void ListingMessage()
+        public void ListingMessage()
         {
             Console.WriteLine("Listando...");
             Console.WriteLine();
         }
-        public static void DeleteErrorMessage()
+        public void DeleteErrorMessage()
         {
             ConsoleInput.WriteError("Não é possível remover todos os usuários.");
             Console.ReadKey();

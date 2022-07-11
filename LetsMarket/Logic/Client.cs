@@ -8,8 +8,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LetsMarket.Logic
 {
-    public class Client : StandardMessages, IEntity
+    public class Client : IEntity
     {
+        IStandardMessages _standardMessage = new StandardMessages();
+
         [Display(Name = "Nome")]
         [Required]
         public string Name { get; set; }
@@ -28,7 +30,7 @@ namespace LetsMarket.Logic
         {
             var client = Prompt.Bind<Client>();
 
-            if (!ShowMessageAndConfirmCreate())
+            if (!_standardMessage.ShowMessageAndConfirmCreate())
                 return;
 
             Database.Clients.Add(client);
@@ -36,7 +38,7 @@ namespace LetsMarket.Logic
         }
         public void List()
         {
-            ListingMessage();
+            _standardMessage.ListingMessage();
 
             var table = new Table(TableConfiguration.UnicodeAlt());
             table.From(Database.Clients);
@@ -61,7 +63,7 @@ namespace LetsMarket.Logic
         {
             if (Database.Clients.Count == 1)
             {
-                DeleteErrorMessage();
+                _standardMessage.DeleteErrorMessage();
                 return;
             }
 

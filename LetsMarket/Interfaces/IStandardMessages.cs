@@ -1,10 +1,10 @@
-﻿namespace LetsMarket
+﻿namespace LetsMarket.Interfaces
 {
     public interface IStandardMessages
     {
-        void DeleteErrorMessage();
-        void ListingMessage();
         bool ShowMessageAndConfirmCreate();
         bool ShowMessageAndConfirmDelete();
+        void ListingMessage();
+        void DeleteErrorMessage();
     }
 }
