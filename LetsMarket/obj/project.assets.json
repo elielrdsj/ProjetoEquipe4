@@ -225,24 +225,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\laisf\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\damar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
+      "projectUniqueName": "C:\\Users\\damar\\Desktop\\Projeto Lets Market\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
       "projectName": "LetsMarket",
-      "projectPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
-      "packagesPath": "C:\\Users\\laisf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\obj\\",
+      "projectPath": "C:\\Users\\damar\\Desktop\\Projeto Lets Market\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
+      "packagesPath": "C:\\Users\\damar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\damar\\Desktop\\Projeto Lets Market\\ProjetoEquipe4\\LetsMarket\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\laisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\damar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -300,7 +295,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

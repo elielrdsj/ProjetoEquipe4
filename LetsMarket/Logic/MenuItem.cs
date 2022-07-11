@@ -1,4 +1,6 @@
-﻿namespace LetsMarket.Logic
+﻿using LetsMarket.Enums;
+
+namespace LetsMarket.Logic
 {
 
     public class MenuItem
@@ -132,11 +134,5 @@
         {
             return title;
         }
-    }
-
-    public enum MenuType
-    {
-        Submenu,
-        Command
     }
 }

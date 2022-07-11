@@ -1,13 +1,12 @@
 ﻿using Bogus;
 using CsvHelper;
+using LetsMarket.Enums;
 using LetsMarket.Logic;
 using System.Globalization;
 using System.Xml.Serialization;
 
 namespace LetsMarket.Db
 {
-    public enum DatabaseOption { Employees, Products, Clients }
-
     public class Database
     {
         private static readonly string _rootDirectory = AppDomain.CurrentDomain.BaseDirectory;
