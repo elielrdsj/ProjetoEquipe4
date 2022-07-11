@@ -7,7 +7,7 @@ using LetsMarket.Interfaces;
 namespace LetsMarket
 {
     public class Program
-    {     
+    {
         public static void Main()
         {
             IEntity Product = new Product();
@@ -20,24 +20,9 @@ namespace LetsMarket
             Login.VerifyLogin();
 
             var menu = new MenuItem("Menu Principal");
-
-            var products = new MenuItem("Produtos");
-            products.Add(new MenuItem("Cadastrar Produtos", Product.Create));
-            products.Add(new MenuItem("Listar Produtos", Product.List));
-            products.Add(new MenuItem("Editar Produtos", Product.Update));
-            products.Add(new MenuItem("Remover Produtos", Product.Delete));
-
-            var employees = new MenuItem("Funcionários");
-            employees.Add(new MenuItem("Cadastrar Funcionários", Employee.Create));
-            employees.Add(new MenuItem("Listar Funcionários", Employee.List));
-            employees.Add(new MenuItem("Editar Funcionários", Employee.Update));
-            employees.Add(new MenuItem("Remover Funcionários", Employee.Delete));
-
-            var clients = new MenuItem("Clientes");
-            clients.Add(new MenuItem("Cadastrar Clientes", Client.Create));
-            clients.Add(new MenuItem("Listar Clientes", Client.List));
-            clients.Add(new MenuItem("Editar Clientes", Client.Update));
-            clients.Add(new MenuItem("Remover Clientes", Client.Delete));
+            var products = CreateMenu(Product, "Produtos");
+            var employees = CreateMenu(Employee, "Funcionários");
+            var clients = CreateMenu(Client, "Clientes");
 
             var sales = new MenuItem("Vendas");
             sales.Add(new MenuItem("Efetuar Venda", Sales.MakeSale));
@@ -49,6 +34,17 @@ namespace LetsMarket
             menu.Add(new MenuItem("Sair", () => Environment.Exit(0)));
 
             menu.Execute();
+        }
+
+        private static MenuItem CreateMenu(IEntity entity, string description)
+        {
+            var entityMenu = new MenuItem(description);
+            entityMenu.Add(new MenuItem("Cadastrar " + description, entity.Create));
+            entityMenu.Add(new MenuItem("Listar " + description, entity.List));
+            entityMenu.Add(new MenuItem("Editar " + description, entity.Update));
+            entityMenu.Add(new MenuItem("Remover " + description, entity.Delete));
+            
+            return entityMenu;
         }
 
         private static void ConfiguraPrompt()
