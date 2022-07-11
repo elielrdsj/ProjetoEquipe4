@@ -20,9 +20,9 @@ namespace LetsMarket
             Login.VerifyLogin();
 
             var menu = new MenuItem("Menu Principal");
-            var products = CreateMenu(Product, "Produtos");
-            var employees = CreateMenu(Employee, "Funcionários");
-            var clients = CreateMenu(Client, "Clientes");
+            var products = CreateMainMenu.Create(Product, "Produtos");
+            var employees = CreateMainMenu.Create(Employee, "Funcionários");
+            var clients = CreateMainMenu.Create(Client, "Clientes");
 
             var sales = new MenuItem("Vendas");
             sales.Add(new MenuItem("Efetuar Venda", Sales.MakeSale));
@@ -36,16 +36,6 @@ namespace LetsMarket
             menu.Execute();
         }
 
-        private static MenuItem CreateMenu(IEntity entity, string description)
-        {
-            var entityMenu = new MenuItem(description);
-            entityMenu.Add(new MenuItem("Cadastrar " + description, entity.Create));
-            entityMenu.Add(new MenuItem("Listar " + description, entity.List));
-            entityMenu.Add(new MenuItem("Editar " + description, entity.Update));
-            entityMenu.Add(new MenuItem("Remover " + description, entity.Delete));
-            
-            return entityMenu;
-        }
 
         private static void ConfiguraPrompt()
         {
