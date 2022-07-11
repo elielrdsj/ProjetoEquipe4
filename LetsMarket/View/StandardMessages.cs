@@ -3,7 +3,7 @@ using Sharprompt;
 
 namespace LetsMarket
 {
-    public class StandardMessages
+    public abstract class StandardMessages
     {
         public static bool ShowMessageAndConfirmCreate()
         {

@@ -18,4 +18,4 @@ C:\Users\laisf\source\repos\ProjetoFinalPOOII\ProjetoEquipe4\LetsMarket\obj\Debu
 C:\Users\laisf\source\repos\ProjetoFinalPOOII\ProjetoEquipe4\LetsMarket\obj\Debug\net6.0\LetsMarket.pdb
 C:\Users\laisf\source\repos\ProjetoFinalPOOII\ProjetoEquipe4\LetsMarket\obj\Debug\net6.0\LetsMarket.genruntimeconfig.cache
 C:\Users\laisf\source\repos\ProjetoFinalPOOII\ProjetoEquipe4\LetsMarket\obj\Debug\net6.0\ref\LetsMarket.dll
-C:\Users\laisf\source\repos\ProjetoFinalPOOII\ProjetoEquipe4\LetsMarket\bin\Debug\net6.0\Db\dados.csv
+C:\Users\laisf\source\repos\ProjetoFinalPOOII\ProjetoEquipe4\LetsMarket\bin\Debug\net6.0\dados.csv
