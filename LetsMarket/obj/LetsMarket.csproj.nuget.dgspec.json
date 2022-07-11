@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\LetsMarket.csproj": {}
+    "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj": {}
   },
   "projects": {
-    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\LetsMarket.csproj": {
+    "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\LetsMarket.csproj",
+        "projectUniqueName": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
         "projectName": "LetsMarket",
-        "projectPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\LetsMarket.csproj",
-        "packagesPath": "C:\\Users\\eliel\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\obj\\",
+        "projectPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
+        "packagesPath": "C:\\Users\\laisf\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\eliel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\laisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,10 +55,6 @@
             "CsvHelper": {
               "target": "Package",
               "version": "[27.2.1, )"
-            },
-            "GetPass": {
-              "target": "Package",
-              "version": "[1.0.0, )"
             },
             "Sharprompt": {
               "target": "Package",
