@@ -29,15 +29,6 @@
           "lib/net6.0/CsvHelper.dll": {}
         }
       },
-      "GetPass/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/GetPass.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/GetPass.dll": {}
-        }
-      },
       "Sharprompt/2.4.1": {
         "type": "package",
         "dependencies": {
@@ -118,19 +109,6 @@
         "lib/netstandard2.0/CsvHelper.xml",
         "lib/netstandard2.1/CsvHelper.dll",
         "lib/netstandard2.1/CsvHelper.xml"
-      ]
-    },
-    "GetPass/1.0.0": {
-      "sha512": "Eob6pXCWLStHr6E1TNzKHakkeUmbiQpfV+R0Vq0DPRs7gaw/zdtM1W9j/oHj2zsFjNSNbIoXetFAjpRjDAZdIA==",
-      "type": "package",
-      "path": "getpass/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "getpass.1.0.0.nupkg.sha512",
-        "getpass.nuspec",
-        "lib/netstandard2.0/GetPass.dll",
-        "lib/netstandard2.0/GetPass.pdb"
       ]
     },
     "Sharprompt/2.4.1": {
@@ -243,24 +221,28 @@
       "BetterConsoleTables >= 1.1.3",
       "Bogus >= 34.0.2",
       "CsvHelper >= 27.2.1",
-      "GetPass >= 1.0.0",
       "Sharprompt >= 2.4.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eliel\\.nuget\\packages\\": {}
+    "C:\\Users\\laisf\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\LetsMarket.csproj",
+      "projectUniqueName": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
       "projectName": "LetsMarket",
-      "projectPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\LetsMarket.csproj",
-      "packagesPath": "C:\\Users\\eliel\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket-master\\LetsMarket\\obj\\",
+      "projectPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
+      "packagesPath": "C:\\Users\\laisf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\eliel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\laisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -297,10 +279,6 @@
           "CsvHelper": {
             "target": "Package",
             "version": "[27.2.1, )"
-          },
-          "GetPass": {
-            "target": "Package",
-            "version": "[1.0.0, )"
           },
           "Sharprompt": {
             "target": "Package",
