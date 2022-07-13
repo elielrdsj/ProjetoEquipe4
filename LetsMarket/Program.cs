@@ -19,7 +19,7 @@ namespace LetsMarket
 
             Login.VerifyLogin();
 
-            var menu = new MenuItem("Menu Principal");
+            var menuItem = new MenuItem("Menu Principal");
             var products = CreateMainMenu.Create(Product, "Produtos");
             var employees = CreateMainMenu.Create(Employee, "Funcionários");
             var clients = CreateMainMenu.Create(Client, "Clientes");
@@ -27,12 +27,14 @@ namespace LetsMarket
             var sales = new MenuItem("Vendas");
             sales.Add(new MenuItem("Efetuar Venda", Sales.MakeSale));
 
-            menu.Add(products);
-            menu.Add(employees);
-            menu.Add(clients);
-            menu.Add(sales);
-            menu.Add(new MenuItem("Sair", () => Environment.Exit(0)));
+            menuItem.Add(products);
+            menuItem.Add(employees);
+            menuItem.Add(clients);
+            menuItem.Add(sales);
+            menuItem.Add(new MenuItem("Sair", () => Environment.Exit(0)));
 
+            Menu menu = new Menu();
+            menu.Item = menuItem;
             menu.Execute();
         }
 
