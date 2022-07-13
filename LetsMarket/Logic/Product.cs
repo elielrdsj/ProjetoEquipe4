@@ -3,6 +3,7 @@ using LetsMarket.Db;
 using Sharprompt;
 using System.ComponentModel.DataAnnotations;
 using LetsMarket.Interfaces;
+using LetsMarket.Enums;
 
 namespace LetsMarket.Logic
 {
