@@ -11,8 +11,8 @@ namespace LetsMarket.Logic
         private MenuItem parent = null;
         public string title { get; set; }
         public List<MenuItem> items { get; set; }
-        public Action action;
-
+        public  Action action;
+                
         public MenuItem(string title)
         {
             this.title = title;

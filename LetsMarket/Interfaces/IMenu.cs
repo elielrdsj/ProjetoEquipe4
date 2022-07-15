@@ -11,3 +11,4 @@ namespace LetsMarket.Interfaces
         public void Execute();
     }
 }
+
