@@ -7,23 +7,20 @@ using System.Xml.Serialization;
 
 namespace LetsMarket.Db
 {
-   
+
     public class Database
     {
         private static readonly string _rootDirectory = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string _employeesDb = Path.Combine(_rootDirectory, "employees.xml");
         private static readonly string _productsDb = Path.Combine(_rootDirectory, "products.xml");
         private static readonly string _clientsDb = Path.Combine(_rootDirectory, "clients.xml");
-
         public static List<Employee> Employees = new List<Employee>();
         public static List<Product> Products = new List<Product>();
         public static List<Client> Clients = new List<Client>();
-
         static Database()
         {
             InitializeDatabase();
         }
-
         public static void InitializeDatabase()
         {
             if (!File.Exists(_employeesDb))
@@ -31,11 +28,9 @@ namespace LetsMarket.Db
                 Employees.Add(new Employee { Name = "Admin", Login = "admin", Password = "admin" });
                 Save(DatabaseOption.Employees);
             }
-
             if (!File.Exists(_productsDb) && File.Exists("dados.csv"))
             {
                 var faker = new Bogus.DataSets.Commerce();
-
                 using (var reader = new StreamReader("dados.csv"))
                 using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 {
@@ -43,11 +38,9 @@ namespace LetsMarket.Db
                     var products = csv.GetRecords<Product>().ToList();
                     Products = products.OrderBy(x => Guid.NewGuid()).Take(10).ToList();
                     products.ForEach(x => x.Price = decimal.Parse(faker.Price()));
-
                     Save(DatabaseOption.Products);
                 }
             }
-
             if (!File.Exists(_clientsDb))
             {
                 for (int i = 0; i < 10; i++)
@@ -55,12 +48,10 @@ namespace LetsMarket.Db
                 
                 Save(DatabaseOption.Clients);
             }
-
             Load(DatabaseOption.Employees);
             Load(DatabaseOption.Products);
             Load(DatabaseOption.Clients);
         }
-
         private static void Load(DatabaseOption options)
         {
             if (options == DatabaseOption.Employees)
@@ -72,7 +63,6 @@ namespace LetsMarket.Db
                     Employees = employees ?? new List<Employee>();
                 }
             }
-
             if (options == DatabaseOption.Products)
             {
                 XmlSerializer employeeSerializer = new XmlSerializer(typeof(List<Product>));
@@ -82,7 +72,6 @@ namespace LetsMarket.Db
                     Products = employees ?? new List<Product>();
                 }
             }
-
             if (options == DatabaseOption.Clients)
             {
                 XmlSerializer clientSerializer = new XmlSerializer(typeof(List<Client>));
@@ -93,11 +82,9 @@ namespace LetsMarket.Db
                 }
             }
         }
-
         public static void Save(DatabaseOption options)
         {
             Console.WriteLine("Salvando...");
-
             if (options == DatabaseOption.Employees)
             {
                 XmlSerializer employeeSerializer = new XmlSerializer(typeof(List<Employee>));
@@ -106,7 +93,6 @@ namespace LetsMarket.Db
                     employeeSerializer.Serialize(writer, Employees);
                 }
             }
-
             if (options == DatabaseOption.Products)
             {
                 XmlSerializer productSerializer = new XmlSerializer(typeof(List<Product>));
@@ -115,7 +101,6 @@ namespace LetsMarket.Db
                     productSerializer.Serialize(writer, Products);
                 }
             }
-
             if (options == DatabaseOption.Clients)
             {
                 XmlSerializer clientSerializer = new XmlSerializer(typeof(List<Client>));

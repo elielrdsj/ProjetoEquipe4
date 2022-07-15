@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LetsMarket.Enums
+namespace LetsMarket.Interfaces
 {
-    public enum MenuType
+    public interface IMenu
     {
-        Submenu,
-        Command
+        public void Execute();
     }
 }

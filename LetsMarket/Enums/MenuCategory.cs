@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace LetsMarket.Enums
 {
-    public enum MenuType
+    public enum MenuCategory
     {
-        Submenu,
-        Command
+        Cadastrar,
+        Listar,
+        Editar,
+        Remover
     }
 }

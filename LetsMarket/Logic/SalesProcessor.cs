@@ -1,8 +1,5 @@
-﻿using BetterConsoleTables;
-using LetsMarket.Db;
+﻿using LetsMarket.Db;
 using LetsMarket.Interfaces;
-using Microsoft.Extensions.DependencyInjection;
-using Sharprompt;
 
 namespace LetsMarket.Logic
 {
@@ -13,25 +10,6 @@ namespace LetsMarket.Logic
         private readonly IItemsForSaleDisplayer _itemsForSaleDisplayer;
         private readonly ITotalPurchase _totalPurchase;
         private readonly IExitAndCancelOptionsRemover _exitAndCancelOptionsRemover;
-        //public void ProcessSales()
-        //{
-        //    var serviceCollection = new ServiceCollection()
-        //        .AddScoped<IListingItems, ListingItems>()
-        //        .AddScoped<IItemsForSaleDisplayer, ItemsForSaleDisplayer>()
-        //        .AddScoped<ITotalPurchase, TotalPurchase>()
-        //        .AddScoped<IExitAndCancelOptionsCreator, ExitAndCancelOptionsCreator>()
-        //        .AddScoped<IExitAndCancelOptionsRemover, ExitAndCancelOptionsRemover>()
-        //        .AddScoped<IItemCanceller, ItemCanceller>()
-        //        .AddScoped<IItemSelector, ItemSelector>();
-
-        //    var serviceProvider = serviceCollection.BuildServiceProvider();
-        //    using (var stream = File.OpenRead("sales.txt"))
-        //    {
-        //        var salesProcessor = serviceProvider.Ge
-        //    }
-
-            
-        //}
 
         public void ProcessSales(Stream stream)
         {

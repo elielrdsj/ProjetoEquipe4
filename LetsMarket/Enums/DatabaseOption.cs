@@ -10,6 +10,6 @@ namespace LetsMarket.Enums
     {
         Employees,
         Products,
-        Clients 
+        Clients
     }
 }
