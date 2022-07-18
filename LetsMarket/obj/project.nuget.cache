@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "YGTfelh3CcLhu0wT9VK3RslXln9kicHmb6Aa27Kidb99nnDN9QqrROBmMH6jQv1AVuYnkkOU31WU09RmjPs2dA==",
+  "dgSpecHash": "i3+gHo4TQCSKdTrjaEGPsIET9gAuAkrqbWn4RTF7Bmef5IlQKZv5/+FJbp9PCS0AomfCAyoK+99JRmomyGakNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
+  "projectFilePath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\LetsMarket.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\laisf\\.nuget\\packages\\betterconsoletables\\1.1.3\\betterconsoletables.1.1.3.nupkg.sha512",
-    "C:\\Users\\laisf\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
-    "C:\\Users\\laisf\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
-    "C:\\Users\\laisf\\.nuget\\packages\\sharprompt\\2.4.3\\sharprompt.2.4.3.nupkg.sha512",
-    "C:\\Users\\laisf\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    "C:\\Users\\eliel\\.nuget\\packages\\betterconsoletables\\1.1.3\\betterconsoletables.1.1.3.nupkg.sha512",
+    "C:\\Users\\eliel\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\eliel\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\eliel\\.nuget\\packages\\sharprompt\\2.4.3\\sharprompt.2.4.3.nupkg.sha512",
+    "C:\\Users\\eliel\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

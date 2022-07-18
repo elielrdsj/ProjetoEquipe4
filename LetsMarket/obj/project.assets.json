@@ -231,19 +231,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\laisf\\.nuget\\packages\\": {}
+    "C:\\Users\\eliel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
+      "projectUniqueName": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\LetsMarket.csproj",
       "projectName": "LetsMarket",
-      "projectPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\LetsMarket.csproj",
-      "packagesPath": "C:\\Users\\laisf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laisf\\source\\repos\\ProjetoFinalPOOII\\ProjetoEquipe4\\LetsMarket\\obj\\",
+      "projectPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\LetsMarket.csproj",
+      "packagesPath": "C:\\Users\\eliel\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\laisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eliel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -301,7 +301,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
