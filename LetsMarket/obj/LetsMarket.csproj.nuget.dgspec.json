@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj": {}
+    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\LetsMarket.csproj": {}
   },
   "projects": {
-    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj": {
+    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\LetsMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj",
+        "projectUniqueName": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\LetsMarket.csproj",
         "projectName": "LetsMarket",
-        "projectPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj",
+        "projectPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\LetsMarket.csproj",
         "packagesPath": "C:\\Users\\eliel\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\obj\\",
+        "outputPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\ProjetoFinal\\ProjetoEquipe4-main\\LetsMarket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,13 +52,9 @@
               "target": "Package",
               "version": "[27.2.1, )"
             },
-            "GetPass": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
             "Sharprompt": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.3, )"
             }
           },
           "imports": [

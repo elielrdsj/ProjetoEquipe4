@@ -1,11 +1,12 @@
-﻿using GetPass;
+﻿using LetsMarket.Enums;
+using Sharprompt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LetsMarket
+namespace LetsMarket.View
 {
     public static class ConsoleInput
     {
@@ -33,8 +34,8 @@ namespace LetsMarket
         }
 
         public static string GetPassword(string prompt)
-        { 
-            var password = ConsolePasswordReader.Read($"{prompt}: ");
+        {
+            var password = Prompt.Password("Senha");
             return password;
         }
 
