@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj": {}
+    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsSpeak.csproj": {}
   },
   "projects": {
-    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj": {
+    "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsSpeak.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj",
-        "projectName": "LetsMarket",
-        "projectPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsMarket.csproj",
+        "projectUniqueName": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsSpeak.csproj",
+        "projectName": "LetsSpeak",
+        "projectPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\LetsSpeak.csproj",
         "packagesPath": "C:\\Users\\eliel\\.nuget\\packages\\",
         "outputPath": "D:\\Users\\eliel\\Downloads\\TopCoders\\repos\\LetsMarket\\LetsMarket\\obj\\",
         "projectStyle": "PackageReference",
@@ -50,15 +50,19 @@
             },
             "CsvHelper": {
               "target": "Package",
-              "version": "[27.2.1, )"
+              "version": "[28.0.1, )"
             },
             "GetPass": {
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Sharprompt": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.3, )"
             }
           },
           "imports": [
